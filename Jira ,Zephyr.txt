@@ -1,0 +1,17 @@
+Project 1
+You are working on as a junior analyst  at a relocation firm.Where to purchase a new office space for their business.
+All of the company s' employees will have opportuinty to move to the new area.
+
+Table name city columns
+city_name  ,avg_temp ,avg_commute , happiness_ranking 
+
+
+Client requirement 
+Avg_temp is between 45-60, Avg_commute is less than 60 min, Happiness ranking is top 15 cities 
+
+SQL Query 
+select city_name, avg_temp, avg_commute ,happiness_ranking
+From cities 
+where avg_temp between 45 and 60
+and avg_commute < 60
+and happiness ranking <= 15

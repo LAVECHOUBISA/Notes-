@@ -1,0 +1,47 @@
+Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user. Large clouds often have functions distributed over multiple locations, each of which is a data center.
+
+
+@Cloud
+Instead of using local servers, use the group of remote servers to manage ,store the application and process data through internet.
+Examplae :AWS ,Azure ,Google Cloud .
+
+#Cloud Computing
+Servers , Virtual Desktop,Software Platform ,Application ,Storage /Data
+
+
+Types of cloud
+1.Private Cloud
+Here the computing resources are deployed for one particular organization. This method is more used for intra business interactions.
+Where the computing resources can be governed ,owned and operated by the same organization.
+
+2.Community Cloud 
+Here the computing resources are provided for a community and organization.
+
+3.Public Cloud
+Here the computing resources is owned ,governed and  government, an academic or business organization.
+
+4.Hybrid Cloud
+This type of cloud can be used for both type of interactions - B2B(Business to Business) B2C (business to consumer)
+
+
+Cloud Service Models
+1.SAAS (software as a service)
+2.Platform as a Service (PAAS) 
+3.Infrastructure as a Service (IAAS)
+
+
+EC2
+Elastic compute cloud provides scalability computing capacity in the Amazon Webs 
+
+
+For create instance 
+1.first click on service and then click E2C
+.Choose AMI- choose operating system
+2Choose Instances type - t2micro mean fastining of system
+3.Configure Instance -2
+4.Add storage 
+5.Add tags 
+6.Configure Security Group 
+7.Review
+
+

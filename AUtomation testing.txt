@@ -1,0 +1,211 @@
+Css selector 
+1. tag id -  tagname#value of id
+2. tag class - tagname.value of class
+3. tag attribute - tagname[attribute = value]
+4. tag class attribute - tagname.value of class [attribute= value]
+
+Xpath are two types 
+1. Absolute 2.Relative 
+Syntax for relative xpath =" // tagname [@ attribute = 'value']"
+
+
+Operator used in xpath 
+1. AND 2. OR OPERATOR 3. START WITH //*[starts-with(@id,'st')] 4. Contains //*[contains(@id,st)]  5. Text  //*[text()= 'Women']
+
+XPATH AXES
+1.SELF 2.PARENT 3.CHILD 4.ANCESTOR 5.DESCENDANT 6.FOLLOWING 7.FOLLOWING SIBLINGS 8.PRECEDING 9PRECEDING SIBLINGS
+
+Commands in selenium 
+1.application commands(through driver)
+  . get - opening the application URL
+  . current_url- to capture the current_url of the current page
+  . title - to capture the title of the current page
+  . page source - to capture source code of the page
+2. Conditional Commands(through webelment)
+   . is_displayed ()
+   . is_enabled()
+   .is_selected()- radio button ,checkboxes
+3. Browser Command
+  . close() - close single browser window(where driver focused)
+  . quit() - close multiple browser window (this will kill the process)
+4. Navigational Command
+   . back()  .forward() .refresh()
+
+### text vs get_attribute('value')
+Wait commands
+time sleep()
+Implict 
+Explicit
+
+
+Checkboxes
+Links
+1.internal
+2.external
+3.block
+
+Dropdown by Select method import
+
+
+
+
+5. Wait commands 
+  time.sleep(seconds)
+      Adv 
+      -- simple to use
+    
+      Disadv ---
+
+       performance of script is very poor
+       If the element is not available within  the time mentioned ,still there is chance of expection
+
+  .implicit
+     adv
+     ---- single statement
+          performance will not be reduced (If the time element is available  within the time is proceed  to execute further statements).
+     dis 
+     ---- If the element is not available in time mentioned, still there is chance of getting exception
+
+
+  .Explicit
+
+
+#Popup method/ Alert method
+  
+ my_alert=driver.switch_to.alert
+ 1.my_alert.text
+ 2.my_alert.accept()
+ 3.my_alert.dismiss()
+
+# Frame
+ my_frames=driver.switch_to.frame(By id , name,webelement )
+ driver.default_content()# every time I have to go main page & make syntax.
+#Browse Window
+  driver.Window_handles
+  driver.switch_to_window
+
+
+Webtable
+Static webtable
+Dynamic Webtable
+
+Date picker 
+Static 2. Dynamic
+
+ActionChains
+1.Mouse hover      move_to_element(element).perform
+2.Drag and drop    context_click(element).perform  
+3.Right click      double_click(element).perform
+4.Double click    drag and drop (Source,Target)
+slider            drag_and_drop_by_offset(element,X,Y)
+    
+#Multiple checkboxes (country section)
+Tagname is mostly span
+#Screenshot 
+#Handle cookies(get.cookies)
+ 1.add cookies(always in dictonary value )
+2.delete cookies
+  cookies- name="xyz"
+           expirydate="23-30-2020
+#Headless testing
+
+
+
+# Data driven testing(import package openpyxl)
+  1. Read a data from excel sheet
+  2. Write a data from excel sheet
+  3. Data driven test cases
+
+ Flow of file in excel
+ 
+files-workbook-sheets-rows-columns-cell
+
+reading 
+sheet.cell(r,c).value
+writing
+sheet.cell(r,c).value=""
+     
+db operation
+#insert,#update,#deleteS
+
+#######################################################################################################################################################
+Selenium Hybrid Framework 
+(Python, Selenium, Pytest , Page Object Model , HTML reports
+
+framework is organized way of  maintaing automating files
+
+
+Objective / goals 
+ 1. Built in framework 
+     pytest,robotframework,unitest
+ 2. Customized/User defined framework
+    Datadriven framework , keyword driven framework, Hybrid Framework
+
+Phases
+-------
+1. Analyze application ,technolohy & skill set of team ,choose test cases
+
+
+If 100 TC 
+Re-test cases 2. Regression cases 3. TC 's can be automable
+
+
+
+For a project make different packages and different folder
+
+1. Configuration (folder) 2. Logs (folder) 3. Reports (folder) 4. Screenshots (folder) 5.pageObjects(package) 6.testcases (packages) 7.utlities(packages)
+
+
+Packages- Selenium , pytest , pytest-html, pytest-xtdst , allure-pytest
+
+
+
+# Automating Login test cases
+1.Create loginpage Object Class under "pageObjects"
+2.Create logintest under "testcases"
+3.Create conftest.py under "testCases"
+
+#Capture Screenshot
+#Read config.ini file
+#Adding logs test 
+
+For generating 8 character string
+    def random_generator(size=8,chars=string.ascii_lowercase+string.digits):
+        return ''.join(random.choice(chars)for x in range(size)) 
+
+##Unittest
+1.setup - method to used in starting every testcase
+decorative used in method @classmethod
+2.tearDown - method to used in last every testcase
+decorative used in method as @classmethod
+3. setUpclass- method only used once while starting testcase
+decorative used in method as @classmethod
+4.tearDownclass- method only used once while ending testcases
+decorative used in method as @classmethod 
+
+For skiping testcase three methods are available
+All three methods used decorative
+@unittest.SkipTest
+@unittest.skip("Mention the message")
+@unittest.skipIf(condition, "Mention the message")
+
+Assertion
+Assertion is nothing but the check point or you can say it as verification for the test case to evaluate some item on the execution
+
+assertequal 
+if both the parameters are matches each other 
+
+assertnotequal 
+if both the parameters are wrong then it test case is pass
+
+assertTrue
+asserFalse
+assertlsNone
+assertlsNotNone
+assertIn-If it value is present 
+assertNotIn-If value is not present
+
+
+POM model unittest
+Driver-Pages-Testcase-Reports
+

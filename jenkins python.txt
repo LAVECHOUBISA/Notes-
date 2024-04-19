@@ -1,0 +1,45 @@
+jenkins command
+
+1.first download jenkinks genric java package (java -jar jenkins.war)
+then change directory where genric java package is downloaded at command prompt
+
+^^code 
+copy address dirctory java jar jenkins.war httpPort=9090
+ 
+
+**new item---- click on freestyle project------  typenameofproject------ 
+new screen is come then click on advanced option then one option is come use "use custom worspace"
+
+inside it copy path of file of test script
+
+*****similarly go down side and inside build tool
+@@@@@select execute shell[cd tests
+                          py.test --browser_name chrome --html=$ workspace /foldername/foldername.html
+
+
+
+#for check in differnt browser
+1.go configure
+////////
+2.click on this project partmeterized option 
+inside it click choice parameter
+then fill details
+/ NAme- browser name
+ /choices- chrome
+          firefox
+            IE
+3.go to execute shell
+    [ cd tests
+      py.test --browser_name "$browser name" --html=$ worspace/foldername/foldername.html]
+
+
+#for xml file of test cases
+go execute shell
+ [cd tests
+      py.test --browser_name "$browser name" --html=$ worspace/foldername/foldername.html  -v--junitxml="result.xml"]
+
+go down one option is there post-built actions
+inside it Junit test result report 
+inside box [tests.xml]
+  
+
